@@ -5,6 +5,7 @@ app.use(require('body-parser')());
 app.use(require('method-override')());
 app.use(require(__dirname + '/config/router')(express.Router()));
 
+//
 // app.get('/', function(req, res){
 // 	res.send('Hello World!');
 // });
