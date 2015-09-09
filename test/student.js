@@ -43,6 +43,10 @@ describe('Student', function() {
 			.end(function(err, res) {
 				if(err) throw err;
 				res.should.have.status(200);
+				res.body.should.be.an.instanceOf(Object).and.have.properties({
+					name: 'Nards John',
+    				studno: '2014-42641'
+				});
 				done();
 			});
 		});
